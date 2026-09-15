@@ -33,7 +33,7 @@ O formulário de login não trata corretamente os caracteres especiais enviados 
 **Resultado observado:**
 A aplicação autenticou o atacante automaticamente como o usuário **admin@juice-sh.op** — a conta de administrador da loja — sem que nenhuma senha correta tivesse sido informada.
 
-![Conta admin logada](evidencias/02-conta-admin-logada.png)
+![Conta admin logada](![Evidência 02](Evidencias/02-conta-admin-logada.png))
 *Evidência: menu de conta mostrando login efetuado como admin@juice-sh.op após o payload de SQL Injection.*
 
 **Impacto:**
@@ -57,10 +57,10 @@ Como consequência direta da falha de autenticação (Vulnerabilidade 1), o atac
 **Resultado observado:**
 Foi possível visualizar o histórico completo de pedidos da conta administrativa (produtos comprados, valores e status de entrega) e os cartões de pagamento cadastrados (números mascarados, mas com titular e validade visíveis).
 
-![Histórico de pedidos do admin](evidencias/03-order-history-admin.png)
+![Histórico de pedidos do admin](![Evidência 03](Evidencias/03-order-history-admin.png))
 *Evidência: histórico de pedidos pertencente à conta administradora, acessado sem autorização.*
 
-![Métodos de pagamento do admin](evidencias/04-payment-options-admin.png)
+![Métodos de pagamento do admin](![Evidência 04](Evidencias/04-payment-options-admin.png))
 *Evidência: cartões de pagamento cadastrados na conta administradora, expostos ao atacante.*
 
 **Impacto:**
@@ -84,7 +84,7 @@ O campo de busca de produtos reflete o termo pesquisado na página de resultados
 **Resultado observado:**
 A aplicação executou o script injetado, exibindo um pop-up de alerta com o texto "XSS", confirmando a execução de código arbitrário no contexto da página.
 
-![Alerta de XSS disparado](evidencias/01-xss-alert-busca.png)
+![Alerta de XSS disparado](![Evidência 01](Evidencias/01-xss-alert-busca.png))
 *Evidência: pop-up de alerta disparado pelo payload injetado no campo de busca, confirmando o XSS refletido.*
 
 **Impacto:**
